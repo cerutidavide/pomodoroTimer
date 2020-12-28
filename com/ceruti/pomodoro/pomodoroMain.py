@@ -1,9 +1,10 @@
 import time
+from playsound import playsound
 from tkinter import *
 
 
 class Application (Frame):
-    def __init__(self , master=None , initialtime=25*60):
+    def __init__(self , master=None , initialtime=6):
         super ().__init__ (master)
 
         self.initialtime = initialtime
@@ -86,7 +87,7 @@ class Application (Frame):
 
                 self.label1.pack ()
 
-                #playsound ('/tmp/nirvana.mp3')
+                playsound ('bell.mp3')
 
             else:
                 self.watchBox.configure (text=self.secToMinSec (self.remaining))
