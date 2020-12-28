@@ -1,10 +1,9 @@
-from tkinter import *
-from playsound import playsound
 import time
+from tkinter import *
 
 
 class Application (Frame):
-    def __init__(self , master=None , initialtime=3):
+    def __init__(self , master=None , initialtime=25*60):
         super ().__init__ (master)
 
         self.initialtime = initialtime
@@ -27,8 +26,8 @@ class Application (Frame):
         self.quitButton = Button (self.bottomFrame , text="QUIT")
         self.quitButton['command'] = self.closeWindow
 
-        self.image1 = PhotoImage (file="/tmp/pomodoro.gif")
-        self.image2 = PhotoImage (file="/tmp/pomodoros.gif")
+        self.image1 = PhotoImage (file="c:\\pomodoro.gif")
+        self.image2 = PhotoImage (file="c:\\pomodoro.gif")
 
         self.label1 = Label (image=self.image1)
 
@@ -87,7 +86,7 @@ class Application (Frame):
 
                 self.label1.pack ()
 
-                playsound ('/tmp/nirvana.mp3')
+                #playsound ('/tmp/nirvana.mp3')
 
             else:
                 self.watchBox.configure (text=self.secToMinSec (self.remaining))
