@@ -4,7 +4,7 @@ from tkinter import *
 
 
 class Application (Frame):
-    def __init__(self , master=None , initialtime=6):
+    def __init__(self , master=None , initialtime=25*60):
         super ().__init__ (master)
 
         self.initialtime = initialtime
